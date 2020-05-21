@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+
+</head>
+<body>
+<button type="button" value="player1" onclick="player1()">Player1</button>
+<button type="button" value="player2" onclick="player2()">Player2</button>
+<p id="carogame"></p>
+
+    <script>
+        let b = document.getElementById("carogame");
+        let board = [];
+        let data = "";
+        for (let i = 0 ;i < 5;i++){
+            board[i] = new Array('.','.','.','.','.');
+        }
+        for (let i = 0; i < 5;i++){
+            data += "<br>";
+            for (let j = 0; j < 5;j++){
+                data += board[i][j] +"&nbsp;&nbsp;&nbsp;&nbsp";
+            }
+        }
+         b.innerHTML = data;
+    </script>
+<script src="tictactoe.js"></script>
+</body>
+</html>
